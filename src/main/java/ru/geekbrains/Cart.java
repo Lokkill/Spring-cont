@@ -1,6 +1,7 @@
 package ru.geekbrains;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -10,6 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Stream;
 
 @Component
+@Scope("prototype")
 public class Cart {
     @Autowired
     private ProductRepository repository;
